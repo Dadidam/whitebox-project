@@ -1,0 +1,32 @@
+{
+  "name": "whitebox-project",
+  "version": "1.0.0",
+  "description": "Code challenge",
+  "main": "index.js",
+  "engines": {
+    "node": "8.10.0",
+    "npm": "5.5.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dadidam/whitebox-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dadidam/whitebox-project/issues"
+  },
+  "homepage": "https://github.com/Dadidam/whitebox-project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
