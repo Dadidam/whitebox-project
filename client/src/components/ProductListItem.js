@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ListItem = ({ data }) => {
   const { image, isActive, name, about, price, _id: id } = data;
@@ -7,7 +8,9 @@ const ListItem = ({ data }) => {
   return (
     <div className="col-sm-12 col-md-6 col-lg-4 p-b-50">
       <div className="block2">
-        <div className={`block2-img wrap-pic-w of-hidden pos-relative ${label}`}>
+        <div
+          className={`block2-img wrap-pic-w of-hidden pos-relative ${label}`}
+        >
           <img src={image} alt={about} />
 
           <div className="block2-overlay trans-0-4">
@@ -31,13 +34,12 @@ const ListItem = ({ data }) => {
         </div>
 
         <div className="block2-txt p-t-20">
-          <a
-            href="product-detail.html"
+          <Link
+            to={`/product/${id}`}
             className="block2-name dis-block s-text3 p-b-5"
           >
             {name}
-          </a>
-
+          </Link>
           <span className="block2-price m-text6 p-r-5">${price}</span>
         </div>
       </div>

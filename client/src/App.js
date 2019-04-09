@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import ProductList from './components/ProductList';
+import ProductDetail from './components/ProductDetail';
 
 class App extends Component {
   render() {
@@ -10,7 +11,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Route exact path="/" component={ProductList} />
-            {/* <Route exact path="/product" component={Dashboard} /> */}
+            <Route exact path="/product/:id" component={ProductDetail} />
           </div>
         </BrowserRouter>
       </div>
